@@ -1,0 +1,30 @@
+@property --color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: red;
+}
+
+@property --color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: blue;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.button-container .button {
+  font-size: larger;
+  padding: 2rem 4rem;
+  background-image: linear-gradient(90deg, var(--color-1), var(--color-2));
+  transition: --color-1 1500ms, --color-2 1500ms;
+}
+
+.button-container .button:hover {
+  --color-1: blue;
+  --color-2: red;
+}
