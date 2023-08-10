@@ -4,8 +4,8 @@ import "./styles.css";
 const page = () => {
   return (
     <div className="curve-sections">
-      <section>
-        <h1>Curves</h1>
+      <section className="section">
+        <h1>Curves 1</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
           esse, necessitatibus temporibus inventore fugiat dolor rem labore
@@ -14,8 +14,8 @@ const page = () => {
         </p>
       </section>
       <div className="spacer layer-1" />
-      <section>
-        <h1>Curves</h1>
+      <section className="section">
+        <h1>Curves 2</h1>
         <p>
           Perspiciatis iure architecto, illo esse voluptatibus recusandae rerum
           laudantium minus sint veniam ullam! Doloribus quas natus, perspiciatis
@@ -23,9 +23,9 @@ const page = () => {
           iusto minus accusantium quo. Unde, aperiam!
         </p>
       </section>
-
-      <section>
-        <h1>Curves</h1>
+      <div className="spacer layer-2" />
+      <section className="section">
+        <h1>Curves 3</h1>
         <p>
           Beatae aliquam eius possimus aut eligendi incidunt ratione, ab,
           dolores vero quibusdam, praesentium molestiae. Sit itaque ipsum, odio
@@ -34,8 +34,8 @@ const page = () => {
         </p>
       </section>
 
-      <section>
-        <h1>Curves</h1>
+      <section className="section">
+        <h1>Curves 4</h1>
         <p>
           Magni, voluptates pariatur ipsa ullam nisi mollitia cum nobis!
           Voluptas ad totam iure neque, harum sit quasi labore? Ipsa a
@@ -44,8 +44,8 @@ const page = () => {
         </p>
       </section>
 
-      <section>
-        <h1>Curves</h1>
+      <section className="section">
+        <h1>Curves 5</h1>
         <p>
           Eligendi dolor quidem rem expedita vero id suscipit excepturi aperiam.
           Molestias debitis soluta quidem? Ipsa perferendis dignissimos,
@@ -54,8 +54,8 @@ const page = () => {
         </p>
       </section>
 
-      <section>
-        <h1>Curves</h1>
+      <section className="section">
+        <h1>Curves 6</h1>
         <p>
           Dolor sunt, ullam omnis quae itaque accusamus enim voluptate!
           Voluptate, nulla ipsa quis facere accusantium, ullam saepe vero vel
@@ -64,8 +64,8 @@ const page = () => {
         </p>
       </section>
 
-      <section>
-        <h1>Curves</h1>
+      <section className="section">
+        <h1>Curves 7</h1>
         <p>
           Iusto labore minima recusandae aperiam nulla! Eligendi similique
           voluptatibus maxime delectus dolores nostrum molestiae repellendus
@@ -73,8 +73,8 @@ const page = () => {
           esse dignissimos exercitationem, tempore quam autem.
         </p>
       </section>
-      <section>
-        <h1>Curves</h1>
+      <section className="section">
+        <h1>Curves 8</h1>
         <p>
           Fugiat dicta hic earum totam excepturi reprehenderit quod culpa et,
           perferendis quibusdam ad cumque sit consectetur, repellat rerum est

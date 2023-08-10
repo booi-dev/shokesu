@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: center;
   height: 300px;
-  background-color: teal;
   padding: 2rem;
   color: black;
 }
@@ -20,35 +19,35 @@
   margin-inline: auto;
 }
 
-.curve-sections section:nth-child(1) {
+.curve-sections section:nth-of-type(1) {
   background-color: #b5e48c;
 }
 
-.curve-sections section:nth-child(2) {
+.curve-sections section:nth-of-type(2) {
   background-color: #99d98c;
 }
 
-.curve-sections section:nth-child(3) {
+.curve-sections section:nth-of-type(3) {
   background-color: #76c893;
 }
 
-.curve-sections section:nth-child(4) {
+.curve-sections section:nth-of-type(4) {
   background-color: #52b69a;
 }
 
-.curve-sections section:nth-child(5) {
+.curve-sections section:nth-of-type(5) {
   background-color: #34a0a4;
 }
 
-.curve-sections section:nth-child(6) {
+.curve-sections section:nth-of-type(6) {
   background-color: #168aad;
 }
 
-.curve-sections section:nth-child(7) {
+.curve-sections section:nth-of-type(7) {
   background-color: #1a759f;
 }
 
-.curve-sections section:nth-child(8) {
+.curve-sections section:nth-of-type(8) {
   background-color: #1e6091;
 }
 
@@ -62,4 +61,8 @@
 
 .layer-1 {
   background-image: url("/waves/green12.svg");
+}
+
+.layer-2 {
+  background-image: url("/waves/green23.svg");
 }
