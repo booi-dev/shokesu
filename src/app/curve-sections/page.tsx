@@ -4,7 +4,7 @@ import "./styles.css";
 const page = () => {
   return (
     <div className="curve-sections">
-      <section className="red">
+      <section>
         <h1>Curves</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
@@ -13,8 +13,8 @@ const page = () => {
           provident! Quas dolorum quam temporibus!
         </p>
       </section>
-
-      <section className="blue">
+      <div className="spacer layer-1" />
+      <section>
         <h1>Curves</h1>
         <p>
           Perspiciatis iure architecto, illo esse voluptatibus recusandae rerum
@@ -24,7 +24,7 @@ const page = () => {
         </p>
       </section>
 
-      <section className="green">
+      <section>
         <h1>Curves</h1>
         <p>
           Beatae aliquam eius possimus aut eligendi incidunt ratione, ab,
@@ -34,7 +34,7 @@ const page = () => {
         </p>
       </section>
 
-      <section className="yellow">
+      <section>
         <h1>Curves</h1>
         <p>
           Magni, voluptates pariatur ipsa ullam nisi mollitia cum nobis!
@@ -44,7 +44,7 @@ const page = () => {
         </p>
       </section>
 
-      <section className="violet">
+      <section>
         <h1>Curves</h1>
         <p>
           Eligendi dolor quidem rem expedita vero id suscipit excepturi aperiam.
@@ -54,7 +54,7 @@ const page = () => {
         </p>
       </section>
 
-      <section className="pink">
+      <section>
         <h1>Curves</h1>
         <p>
           Dolor sunt, ullam omnis quae itaque accusamus enim voluptate!
@@ -64,7 +64,7 @@ const page = () => {
         </p>
       </section>
 
-      <section className="teal">
+      <section>
         <h1>Curves</h1>
         <p>
           Iusto labore minima recusandae aperiam nulla! Eligendi similique
@@ -73,7 +73,7 @@ const page = () => {
           esse dignissimos exercitationem, tempore quam autem.
         </p>
       </section>
-      <section className="brown">
+      <section>
         <h1>Curves</h1>
         <p>
           Fugiat dicta hic earum totam excepturi reprehenderit quod culpa et,

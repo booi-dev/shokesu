@@ -51,3 +51,15 @@
 .curve-sections section:nth-child(8) {
   background-color: #1e6091;
 }
+
+.spacer {
+  height: 100px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer-1 {
+  background-image: url("/waves/green12.svg");
+}
