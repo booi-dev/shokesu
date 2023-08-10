@@ -4,7 +4,7 @@ import "./styles.css";
 const page = () => {
   return (
     <div className="curve-sections">
-      <section>
+      <section className="red">
         <h1>Curves</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
@@ -13,7 +13,8 @@ const page = () => {
           provident! Quas dolorum quam temporibus!
         </p>
       </section>
-      <section>
+
+      <section className="blue">
         <h1>Curves</h1>
         <p>
           Perspiciatis iure architecto, illo esse voluptatibus recusandae rerum
@@ -22,7 +23,8 @@ const page = () => {
           iusto minus accusantium quo. Unde, aperiam!
         </p>
       </section>
-      <section>
+
+      <section className="green">
         <h1>Curves</h1>
         <p>
           Beatae aliquam eius possimus aut eligendi incidunt ratione, ab,
@@ -31,7 +33,8 @@ const page = () => {
           voluptate, nemo ducimus!
         </p>
       </section>
-      <section>
+
+      <section className="yellow">
         <h1>Curves</h1>
         <p>
           Magni, voluptates pariatur ipsa ullam nisi mollitia cum nobis!
@@ -40,7 +43,8 @@ const page = () => {
           autem perferendis?
         </p>
       </section>
-      <section>
+
+      <section className="violet">
         <h1>Curves</h1>
         <p>
           Eligendi dolor quidem rem expedita vero id suscipit excepturi aperiam.
@@ -49,7 +53,8 @@ const page = () => {
           iusto sunt consectetur asperiores.
         </p>
       </section>
-      <section>
+
+      <section className="pink">
         <h1>Curves</h1>
         <p>
           Dolor sunt, ullam omnis quae itaque accusamus enim voluptate!
@@ -58,7 +63,8 @@ const page = () => {
           doloremque consequatur excepturi!
         </p>
       </section>
-      <section>
+
+      <section className="teal">
         <h1>Curves</h1>
         <p>
           Iusto labore minima recusandae aperiam nulla! Eligendi similique
@@ -67,7 +73,7 @@ const page = () => {
           esse dignissimos exercitationem, tempore quam autem.
         </p>
       </section>
-      <section>
+      <section className="brown">
         <h1>Curves</h1>
         <p>
           Fugiat dicta hic earum totam excepturi reprehenderit quod culpa et,
