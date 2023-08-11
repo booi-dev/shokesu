@@ -33,7 +33,7 @@ const page = () => {
           voluptate, nemo ducimus!
         </p>
       </section>
-
+      <div className="spacer layer-3" />
       <section className="section">
         <h1>Curves 4</h1>
         <p>
