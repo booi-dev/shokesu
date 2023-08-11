@@ -73,6 +73,7 @@ const page = () => {
           esse dignissimos exercitationem, tempore quam autem.
         </p>
       </section>
+      <div className="spacer layer-7" />
       <section className="section">
         <h1>Curves 8</h1>
         <p>
