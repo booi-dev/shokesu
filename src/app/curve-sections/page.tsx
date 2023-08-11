@@ -43,7 +43,7 @@ const page = () => {
           autem perferendis?
         </p>
       </section>
-
+      <div className="spacer layer-4" />
       <section className="section">
         <h1>Curves 5</h1>
         <p>
@@ -53,7 +53,7 @@ const page = () => {
           iusto sunt consectetur asperiores.
         </p>
       </section>
-
+      <div className="spacer layer-5" />
       <section className="section">
         <h1>Curves 6</h1>
         <p>
@@ -63,7 +63,7 @@ const page = () => {
           doloremque consequatur excepturi!
         </p>
       </section>
-
+      <div className="spacer layer-6" />
       <section className="section">
         <h1>Curves 7</h1>
         <p>
