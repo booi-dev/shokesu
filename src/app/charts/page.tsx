@@ -1,15 +1,11 @@
 import React from "react";
 import RechartLineGraph from "./rechartLine";
-import { simplePieData } from "./simplePieData";
-import PieChartExample from "./simplePie";
-
+import SimplePie from "./pie";
 const Scene = () => {
   return (
     <div>
       <RechartLineGraph />
-      <div className="min-h-screen">
-        <PieChartExample />
-      </div>
+      <SimplePie />
     </div>
   );
 };
