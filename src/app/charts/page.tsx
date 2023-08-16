@@ -5,9 +5,8 @@ import SimpleDoughnut from "./doughnut";
 const Scene = () => {
   return (
     <div>
-      <RechartLineGraph />
-      <SimplePie />
-      <div className="aspect-square w-[500px]">
+      <div className="mx-auto flex aspect-square w-[500px] flex-col gap-4">
+        <SimplePie />
         <SimpleDoughnut />
       </div>
     </div>
