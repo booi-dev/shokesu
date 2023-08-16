@@ -29,20 +29,20 @@ const renderCustomizedLabel = (props: PieLabelRenderProps) => {
     midAngle,
     innerRadius = 0,
     outerRadius = 0,
-    percent,
+    percent = 1,
     index,
   } = props;
 
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+  const radius = +innerRadius + (+outerRadius - +innerRadius) * 0.5;
+  const x = +cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = +cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
     <text
       x={x}
       y={y}
       fill="white"
-      textAnchor={x > cx ? "start" : "end"}
+      textAnchor={x > +cx ? "start" : "end"}
       dominantBaseline="central"
     >
       {`${(percent * 100).toFixed(0)}%`}
