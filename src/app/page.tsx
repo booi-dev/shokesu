@@ -6,6 +6,7 @@ export default function Home() {
       <Link href="/top-progress-bar">top progress bar</Link>
       <Link href="/gradient-animation">gradient animation</Link>
       <Link href="/curve-sections">curve sections</Link>
+      <Link href="/charts">charts</Link>
     </main>
   );
 }
