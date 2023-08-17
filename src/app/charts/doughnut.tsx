@@ -6,6 +6,8 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+// ChartJS.defaults.color = "#ff0000";
+
 const data = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
@@ -35,9 +37,33 @@ const data = {
 
 const options = {
   animation: false,
-  cutout: "80%",
+  cutout: "90%",
 };
 
-const SimpleDoughnut = () => <Doughnut data={data} options={options} />;
+const textPlugin = {
+  id: "centerText",
+  beforeDraw: (chart: ChartJS) => {
+    const width = chart.width;
+    const height = chart.height;
+    const ctx = chart.ctx;
+
+    ctx.restore();
+    ctx.font = "16px Arial";
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = "white"; // Text color
+
+    const text = "Center Text"; // The text you want to display
+
+    const textX = Math.round((width - ctx.measureText(text).width) / 2);
+    const textY = height / 2;
+
+    ctx.fillText(text, textX, textY);
+    ctx.save();
+  },
+};
+
+const SimpleDoughnut = () => (
+  <Doughnut data={data} options={options} plugins={[textPlugin]} />
+);
 
 export default SimpleDoughnut;
