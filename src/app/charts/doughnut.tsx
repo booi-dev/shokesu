@@ -6,7 +6,7 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
+const data = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
     {
@@ -33,6 +33,11 @@ export const data = {
   ],
 };
 
-const SimpleDoughnut = () => <Doughnut data={data} />;
+const options = {
+  animation: false,
+  cutout: "80%",
+};
+
+const SimpleDoughnut = () => <Doughnut data={data} options={options} />;
 
 export default SimpleDoughnut;
