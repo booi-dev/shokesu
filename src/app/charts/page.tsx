@@ -1,5 +1,4 @@
 import React from "react";
-import RechartLineGraph from "./rechartLine";
 import SimplePie from "./pie";
 import SimpleDoughnut from "./doughnut";
 import SimplePolarArea from "./polarAreaChart";
