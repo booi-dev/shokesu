@@ -7,6 +7,7 @@ export default function Home() {
       <Link href="/gradient-animation">gradient animation</Link>
       <Link href="/curve-sections">curve sections</Link>
       <Link href="/charts">charts</Link>
+      <Link href="/draggables">draggables</Link>
     </main>
   );
 }

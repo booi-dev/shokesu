@@ -1,6 +1,8 @@
 // src/components/HorizontalLine.js
+"use client";
+
 import React, { useState } from "react";
-import "./HorizontalLine.css";
+// import "./HorizontalLine.css";
 
 const HorizontalLine = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -36,7 +38,7 @@ const HorizontalLine = () => {
 
   return (
     <div
-      className="horizontal-line"
+      className="horizontal-line absolute h-8 w-1/2 bg-green-500"
       id="draggable-line"
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
