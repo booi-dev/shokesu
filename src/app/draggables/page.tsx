@@ -37,13 +37,15 @@ const HorizontalLine = () => {
   };
 
   return (
-    <div
-      className="horizontal-line absolute h-8 w-1/2 bg-green-500"
-      id="draggable-line"
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-    ></div>
+    <div className="flex h-screen items-center">
+      <div
+        className="horizontal-line absolute h-8 w-1/2  cursor-grab bg-green-500"
+        id="draggable-line"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+      ></div>
+    </div>
   );
 };
 
