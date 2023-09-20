@@ -37,7 +37,7 @@ const data = {
 
 const options = {
   animation: false,
-  cutout: "90%",
+  cutout: "80%",
 };
 
 const textPlugin = {
@@ -50,7 +50,7 @@ const textPlugin = {
     ctx.restore();
     ctx.font = "16px Arial";
     ctx.textBaseline = "middle";
-    ctx.fillStyle = "white"; // Text color
+    ctx.fillStyle = "#ffffff"; // Text color
 
     const text = "Center Text"; // The text you want to display
 
