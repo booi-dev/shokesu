@@ -1,52 +1,61 @@
-// src/components/HorizontalLine.js
 "use client";
 
 import React, { useState } from "react";
-// import "./HorizontalLine.css";
+import Image from "next/image";
 
-const HorizontalLine = () => {
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [initialPosition, setInitialPosition] = useState(0);
+const ResizableDiv: React.FC = () => {
+  const [width, setWidth] = useState<number>(250); // Initial width in pixels
+  const [isResizing, setIsResizing] = useState<boolean>(false);
+  const [startX, setStartX] = useState<number>(0);
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    const target = e.currentTarget as HTMLDivElement;
-    setIsDragging(true);
+  const handleMouseDown = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setIsResizing(true);
     setStartX(e.clientX);
-    setInitialPosition(target.getBoundingClientRect().left);
-    target.style.transition = "none";
+    e.currentTarget.style.transition = "none";
+    console.log("mouse down");
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
-
-    const target = e.currentTarget as HTMLDivElement;
+  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!isResizing) return;
 
     const offsetX = e.clientX - startX;
-    const newPosition = initialPosition + offsetX;
+    const newWidth = width + offsetX;
 
-    target.style.left = `${newPosition}px`;
+    setWidth(newWidth);
+
+    console.log("mouse move");
   };
 
-  const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
+  const handleMouseUp = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (isResizing) {
+      setIsResizing(false);
+      e.currentTarget.style.transition = "left 0.3s ease"; // Add smooth transition
+    }
 
-    const target = e.currentTarget as HTMLDivElement;
-    setIsDragging(false);
-    target.style.transition = "left 0.3s ease"; // Add smooth transition
+    console.log("mouse up");
   };
 
   return (
-    <div className="flex h-screen items-center">
-      <div
-        className="horizontal-line absolute h-8 w-1/2  cursor-grab bg-green-500"
-        id="draggable-line"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-      ></div>
+    <div className="flex h-screen items-center justify-center">
+      <div className=" aspect-square w-[500px] bg-green-200">
+        <div className="relative h-full w-full bg-green-400" style={{ width }}>
+          <button
+            className="absolute -right-4 top-1/2 -translate-y-1/2"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+          >
+            <Image
+              src="/icons/drag-vertical.svg"
+              width={30}
+              height={30}
+              alt="Resizable Button"
+            />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default HorizontalLine;
+export default ResizableDiv;
