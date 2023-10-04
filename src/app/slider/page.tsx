@@ -1,4 +1,7 @@
 import React from "react";
+import SlideContainer from "./SlideContainer";
+import Slide from "./Slide";
+import Image from "next/image";
 
 const images = [
   {
@@ -24,7 +27,17 @@ const images = [
 ];
 
 const Page = () => {
-  return <div>Page</div>;
+  return (
+    <div>
+      <SlideContainer>
+        {images.map((img) => (
+          <Slide key={img.id}>
+            <Image src={img.url} alt={img.alt} width={200} height={200} />
+          </Slide>
+        ))}
+      </SlideContainer>
+    </div>
+  );
 };
 
 export default Page;
