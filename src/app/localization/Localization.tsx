@@ -1,15 +1,26 @@
+"use client";
+
+import { useState } from "react";
+
 const Localization = () => {
+  const [count, setCount] = useState(0);
+
+  const handleLanguageSelector = () => {
+    console.log("changing");
+  };
+
   return (
-    <div className="mx-auto w-full max-w-7xl mt-28">
+    <div className="mx-auto w-full max-w-7xl mt-28 text-3xl">
       <div className="flex justify-between">
-        <h1 className="text-xl uppercase ">Localization</h1>
+        <h1 className="text-4xl uppercase ">Localization</h1>
 
         <div>
           <label htmlFor="language-selector"> Change language </label>
           <select
-            id="laguage-selector"
+            name="laguage-selector"
             className="text-black ml-4"
             defaultValue="en"
+            onChange={handleLanguageSelector}
           >
             <option value="en"> English</option>
             <option value="sp"> Spanish</option>
@@ -19,7 +30,9 @@ const Localization = () => {
         </div>
       </div>
 
-      <p className="mt-10">This is my name in english - Ninza</p>
+      <div className="underline underline-offset-2 ">{`Language change ${count} times`}</div>
+
+      <p className="mt-10 text-2xl">This is my name in english - Ninza</p>
     </div>
   );
 };
