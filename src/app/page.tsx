@@ -8,6 +8,8 @@ export default function Home() {
       <Link href="/curve-sections">curve sections</Link>
       <Link href="/charts">charts</Link>
       <Link href="/draggables">draggables</Link>
+      <Link href="/slider">slider</Link>
+      <Link href="/localization">localization</Link>
     </main>
   );
 }
