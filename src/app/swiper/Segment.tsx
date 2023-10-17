@@ -1,9 +1,10 @@
 "use client";
 
 import { cn, splitArrayIntoChunks } from "@/utils/helpers";
-import { ArrowLeftSquare, ArrowRightSquare } from "lucide-react";
 import { useState } from "react";
 import Button from "../components/ui/Button";
+
+import { ArrowLeftSquare, ArrowRightSquare } from "lucide-react";
 
 const listConfig = [
   "a",
@@ -64,6 +65,17 @@ const Segment = () => {
 
   return (
     <div>
+      <div className="flex gap-2 justify-center items-center py-4">
+        {splittedArr.map((_, idx) => (
+          <div
+            key={idx}
+            className={cn(
+              "h-4 w-4 rounded-full bg-gray-500 transition-all duration-300",
+              activeIdx === idx && "w-8 bg-gray-300"
+            )}
+          />
+        ))}
+      </div>
       <div className="flex gap-2 bg-green-300 p-4 items-center">
         <Button
           onClick={handlePrev}
@@ -85,7 +97,7 @@ const Segment = () => {
               {item.map((i) => (
                 <div
                   key={i}
-                  className="p-4 w-full h-[200px] border-4 border-gray-900 bg-slate-700 flex items-center justify-center uppercase"
+                  className="p-4 w-full h-[200px] text-5xl border-4 border-gray-900 bg-slate-700 flex items-center justify-center uppercase"
                   style={{ width: itemWidth }}
                 >
                   {i}
@@ -104,7 +116,7 @@ const Segment = () => {
         </Button>
       </div>
 
-      <div className="flex items-center flex-col justify-center mt-8">
+      <div className="flex items-center mx-auto flex-col justify-center mt-8 w-[400px]">
         <div>{itemSize}</div>
         <input
           type="range"
@@ -112,6 +124,7 @@ const Segment = () => {
           max="10"
           value={itemSize}
           onChange={handleSlider}
+          className="w-full"
         />
       </div>
     </div>
