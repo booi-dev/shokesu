@@ -56,6 +56,10 @@ const Segment = () => {
     });
   };
 
+  const handleSetActiveIndex = (val: number) => {
+    setActiveIdx(val);
+  };
+
   const handleSlider = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = Number(e.target.value);
     setItemSize(val);
@@ -67,29 +71,30 @@ const Segment = () => {
     <div>
       <div className="flex gap-2 justify-center items-center py-4">
         {splittedArr.map((_, idx) => (
-          <div
+          <button
             key={idx}
             className={cn(
-              "h-4 w-4 rounded-full bg-gray-500 transition-all duration-300",
-              activeIdx === idx && "w-8 bg-gray-300"
+              "h-4 w-4 rounded-full bg-gray-500 transition-all duration-300 hover:scale-105",
+              activeIdx === idx && "w-10 bg-gray-300"
             )}
+            onClick={() => handleSetActiveIndex(idx)}
           />
         ))}
       </div>
-      <div className="flex gap-2 bg-green-300 p-4 items-center">
+      <div className="flex gap-2 bg-gray-600 p-4 items-center rounded-lg">
         <Button
           onClick={handlePrev}
           disabled={translateValue < 0}
-          className={cn(translateValue === 0 && "opacity-50")}
+          className={cn(translateValue === 0 && "opacity-40")}
         >
-          <ArrowLeftSquare color="rgb(30 41 59)" size={35} />
+          <ArrowLeftSquare color="rgb(209 213 219)" size={35} />
         </Button>
 
         <div className="w-[600px] flex items-center overflow-hidden">
           {splittedArr.map((item, idx) => (
             <div
               key={idx}
-              className=" w-full  shrink-0 bg-slate-800 flex gap-1 transition-all duration-300"
+              className=" w-full p-2 shrink-0 bg-gray-900 flex gap-2 transition-all duration-300"
               style={{
                 transform: `translateX(-${translateValue}%)`,
               }}
@@ -97,7 +102,7 @@ const Segment = () => {
               {item.map((i) => (
                 <div
                   key={i}
-                  className="p-4 w-full h-[200px] text-5xl border-4 border-gray-900 bg-slate-700 flex items-center justify-center uppercase"
+                  className="p-4 w-full h-[200px] rounded-lg text-5xl bg-gray-700 flex items-center justify-center uppercase"
                   style={{ width: itemWidth }}
                 >
                   {i}
@@ -110,21 +115,21 @@ const Segment = () => {
         <Button
           onClick={handleNext}
           disabled={activeIdx >= totalIndexValue}
-          className={cn(activeIdx >= totalIndexValue - 1 && "opacity-50")}
+          className={cn(activeIdx >= totalIndexValue - 1 && "opacity-40")}
         >
-          <ArrowRightSquare color="rgb(30 41 59)" size={35} />
+          <ArrowRightSquare color="rgb(209 213 219)" size={35} />
         </Button>
       </div>
 
       <div className="flex items-center mx-auto flex-col justify-center mt-8 w-[400px]">
-        <div>{itemSize}</div>
+        <div className="text-2xl">{itemSize}</div>
         <input
           type="range"
           min="1"
           max="10"
           value={itemSize}
           onChange={handleSlider}
-          className="w-full"
+          className="w-full mt-2"
         />
       </div>
     </div>
