@@ -10,6 +10,7 @@ export default function Home() {
       <Link href="/draggables">draggables</Link>
       <Link href="/slider">slider</Link>
       <Link href="/localization">localization</Link>
+      <Link href="/swiper">swiper</Link>
     </main>
   );
 }
