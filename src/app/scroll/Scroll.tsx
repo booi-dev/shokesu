@@ -29,11 +29,11 @@ const listConfig = [
 
 const Scroll = () => {
   const { ref: refFirst, inView: firstInView } = useInView({
-    threshold: 0,
+    threshold: 1,
   });
 
   const { ref: refLast, inView: lastInView } = useInView({
-    threshold: 0,
+    threshold: 1,
   });
 
   console.log(firstInView, lastInView);
@@ -47,14 +47,14 @@ const Scroll = () => {
             firstInView && "opacity-0"
           )}
         >
-          <MoveLeft color="#000" />
+          <MoveLeft color="#000" className="animate-bounce-x" />
         </div>
 
         <div className="flex gap-4  justify-between snap-x border border-white p-4 rounded-sm overflow-x-scroll relative">
           {listConfig.map((item, idx) => (
             <div
               key={item}
-              className="uppercase bg-gray-300 w-32 shrink-0 aspect-square text-black snap-start"
+              className="uppercase p-2 bg-gray-300 w-32 shrink-0 aspect-square text-black snap-start"
               ref={
                 idx === 0
                   ? refFirst
@@ -74,7 +74,7 @@ const Scroll = () => {
             lastInView && "opacity-0"
           )}
         >
-          <MoveRight color="#000" />
+          <MoveRight color="#000" className="animate-bounce-x" />
         </div>
       </div>
     </div>
