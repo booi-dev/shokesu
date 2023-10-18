@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "@/utils/helpers";
+import { MoveLeft, MoveRight } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
 const listConfig = [
@@ -38,9 +40,17 @@ const Scroll = () => {
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <div>
-        <div className="bg-red-500 w-32 h-32 shrink-0" />
-        <div className="flex gap-4 w-[600px] justify-between snap-x border border-white p-4 rounded-sm overflow-x-scroll relative">
+      <div className="flex items-center relative border border-blue-500 w-[700px]">
+        <div
+          className={cn(
+            "bg-white/50 absolute inset-0 right-auto w-16 shrink-0 z-20 flex items-center justify-center transition-all duration-300",
+            firstInView && "opacity-0"
+          )}
+        >
+          <MoveLeft color="#000" />
+        </div>
+
+        <div className="flex gap-4  justify-between snap-x border border-white p-4 rounded-sm overflow-x-scroll relative">
           {listConfig.map((item, idx) => (
             <div
               key={item}
@@ -56,6 +66,15 @@ const Scroll = () => {
               {item}
             </div>
           ))}
+        </div>
+
+        <div
+          className={cn(
+            "bg-white/50 absolute inset-0 left-auto w-16 shrink-0 z-20 flex items-center justify-center transition-all duration-300",
+            lastInView && "opacity-0"
+          )}
+        >
+          <MoveRight color="#000" />
         </div>
       </div>
     </div>
