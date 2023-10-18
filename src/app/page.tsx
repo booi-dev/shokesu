@@ -3,15 +3,60 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col text-5xl uppercase p-24 space-y-2">
-      <Link href="/top-progress-bar">top progress bar</Link>
-      <Link href="/gradient-animation">gradient animation</Link>
-      <Link href="/curve-sections">curve sections</Link>
-      <Link href="/charts">charts</Link>
-      <Link href="/draggables">draggables</Link>
-      <Link href="/slider">slider</Link>
-      <Link href="/localization">localization</Link>
-      <Link href="/swiper">swiper</Link>
-      <Link href="/scroll">scroll</Link>
+      <Link
+        href="/top-progress-bar"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        top progress bar
+      </Link>
+      <Link
+        href="/gradient-animation"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        gradient animation
+      </Link>
+      <Link
+        href="/curve-sections"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        curve sections
+      </Link>
+      <Link
+        href="/charts"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        charts
+      </Link>
+      <Link
+        href="/draggables"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        draggables
+      </Link>
+      <Link
+        href="/slider"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        slider
+      </Link>
+      <Link
+        href="/localization"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        localization
+      </Link>
+      <Link
+        href="/swiper"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        swiper
+      </Link>
+      <Link
+        href="/scroll"
+        className="hover:bg-white w-max hover:text-black transition-all duration-150"
+      >
+        scroll
+      </Link>
     </main>
   );
 }
