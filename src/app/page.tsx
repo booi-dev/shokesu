@@ -28,10 +28,10 @@ export default function Home() {
         charts
       </Link>
       <Link
-        href="/draggables"
+        href="/comparer"
         className="hover:bg-white w-max hover:text-black transition-all duration-150"
       >
-        draggables
+        image comparer
       </Link>
       <Link
         href="/slider"

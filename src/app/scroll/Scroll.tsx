@@ -50,7 +50,7 @@ const Scroll = () => {
           <MoveLeft color="#000" className="animate-bounce-x" />
         </div>
 
-        <div className="flex gap-4  justify-between snap-x border border-white p-4 rounded-sm overflow-x-scroll relative">
+        <div className="flex gap-4 justify-between snap-x border border-white p-4 rounded-sm overflow-x-scroll relative">
           {listConfig.map((item, idx) => (
             <div
               key={item}

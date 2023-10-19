@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
-import Image from "next/image";
 import { cn } from "@/utils/helpers";
 import useWindowIsResize from "@/utils/hooks/useWindowIsResize";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 const img1 =
   "https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg?auto=compress&cs=tinysrgb&w=600";
 const img2 =
   "https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=600";
 
-const ResizableDiv: React.FC = () => {
+const Comparer: React.FC = () => {
   const [containerRect, setContainerRect] = useState({
     x: 0,
     y: 0,
@@ -128,4 +127,4 @@ const ResizableDiv: React.FC = () => {
   );
 };
 
-export default ResizableDiv;
+export default Comparer;
