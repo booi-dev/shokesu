@@ -23,6 +23,7 @@ function useWindowIsResize(delay = 300) {
       window.removeEventListener("resize", handleResize);
       clearTimeout(resizeTimer);
     };
+    /* eslint-disable-next-line */
   }, [delay]);
 
   return isResizing;

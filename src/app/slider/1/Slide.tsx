@@ -5,7 +5,7 @@ type SlideProps = {
 };
 
 const Slide: React.FC<SlideProps> = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="absolute w-[400px] h-[400px]">{children}</div>;
 };
 
 export default Slide;

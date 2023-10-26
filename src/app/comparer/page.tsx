@@ -9,7 +9,11 @@ const img2 =
 const page = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <ComparerTwo leftImageURL={img1} rightImageURL={img2} />
+      <ComparerTwo
+        topImageURL={img1}
+        bottomImageURL={img2}
+        className="w-[500px] h-[500px]"
+      />
     </div>
   );
 };

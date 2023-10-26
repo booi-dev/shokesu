@@ -3,10 +3,12 @@
 import Localization from "./Localization";
 
 import i18n from "i18next";
+import { Suspense } from "react";
 import { initReactI18next, useTranslation } from "react-i18next";
+import Loading from "./loading";
 
-const translationsEn = { text: "This is my name in english - Ninza" };
-const translationsFr = {};
+const translationsEn = { text: "This is my name in english 1 - Ninza" };
+const translationsFr = { text: "This is my name in Frencg 1 - Ninza" };
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -23,7 +25,9 @@ const Page = () => {
 
   return (
     <div>
-      <Localization />
+      <Suspense fallback={<Loading />}>
+        <Localization t={t} />
+      </Suspense>
     </div>
   );
 };
