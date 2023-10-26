@@ -23,13 +23,28 @@ const images = [
 
 const Page = () => {
   return (
-    <Slider>
-      {images.map((img) => (
-        <Slide key={img.id}>
-          <Image src={img.url} alt={img.alt} fill className="" />
-        </Slide>
-      ))}
-    </Slider>
+    <div className="p-20 ">
+      <Slider className="h-[500px] bg-gray-800">
+        {images.map((img, idx) => (
+          <Slide key={img.id} idx={idx} totalItemLength={images.length}>
+            <div className="relative border-2 border-white rounded-md">
+              <div className="absolute top-2 aspect-square rounded-full left-2 text-2xl w-[40px] h-[40px] bg-white z-10 text-black p-2">
+                {idx + 1}
+              </div>
+              <div className="relative w-[400px] h-[400px] overflow-hidden">
+                <Image
+                  src={img.url}
+                  alt={img.alt}
+                  fill
+                  className="object-fit"
+                />
+              </div>
+            </div>
+          </Slide>
+        ))}
+      </Slider>
+      <h1>fsdjn</h1>
+    </div>
   );
 };
 
