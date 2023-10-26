@@ -1,24 +1,49 @@
-import { cn } from "@/utils/helpers";
-import React from "react";
+"use client";
 
-type SlideProps = {
+import { cn } from "@/utils/helpers";
+import React, { useContext } from "react";
+import { CountContext } from "./Slider";
+
+type Props = {
   children: React.ReactNode;
   totalItemLength: number;
   idx: number;
 };
 
-const Slide: React.FC<SlideProps> = ({ children, idx, totalItemLength }) => {
-  const BASE_TRANSLATE_VALUE = 1.5;
+const BASE_TRANSLATE_VALUE = 2;
 
-  const translateValue = BASE_TRANSLATE_VALUE * idx;
+const Slide: React.FC<Props> = (props) => {
+  const { children, idx, totalItemLength } = props;
+
+  const { activeIdx, setActiveIdx } = useContext(CountContext);
+
+  const diff = Math.abs(idx - activeIdx);
+
+  const translateValue =
+    activeIdx === idx
+      ? 0
+      : activeIdx > idx
+      ? BASE_TRANSLATE_VALUE * diff
+      : BASE_TRANSLATE_VALUE * (totalItemLength - diff);
+
+  const zIndex =
+    activeIdx === idx
+      ? totalItemLength
+      : activeIdx > idx
+      ? totalItemLength - diff
+      : totalItemLength - (totalItemLength - diff);
 
   return (
     <div
-      className={cn("absolute")}
+      className={cn(
+        "absolute transition-all duration-300",
+        activeIdx !== idx && "opacity-100"
+      )}
       style={{
         transform: `translate(${translateValue}rem, -${translateValue}rem)`,
-        zIndex: `${totalItemLength - idx}`,
+        zIndex: zIndex,
       }}
+      onClick={() => setActiveIdx(idx)}
     >
       {children}
     </div>

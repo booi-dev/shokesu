@@ -24,12 +24,12 @@ const images = [
 const Page = () => {
   return (
     <div className="p-20 ">
-      <Slider className="h-[500px] bg-gray-800">
+      <Slider className="h-[420px] bg-gray-800">
         {images.map((img, idx) => (
           <Slide key={img.id} idx={idx} totalItemLength={images.length}>
             <div className="relative border-2 border-white rounded-md">
               <div className="absolute top-2 aspect-square rounded-full left-2 text-2xl w-[40px] h-[40px] bg-white z-10 text-black p-2">
-                {idx + 1}
+                {idx}
               </div>
               <div className="relative w-[400px] h-[400px] overflow-hidden">
                 <Image
