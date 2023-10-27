@@ -45,18 +45,6 @@ export default function Home() {
       >
         localization
       </Link>
-      <Link
-        href="/swiper"
-        className="hover:bg-white w-max hover:text-black transition-all duration-150"
-      >
-        swiper
-      </Link>
-      <Link
-        href="/scroll"
-        className="hover:bg-white w-max hover:text-black transition-all duration-150"
-      >
-        scroll
-      </Link>
     </main>
   );
 }

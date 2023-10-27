@@ -2,7 +2,7 @@
 
 import { cn, splitArrayIntoChunks } from "@/utils/helpers";
 import { useState } from "react";
-import Button from "../components/ui/Button";
+import Button from "../../components/ui/Button";
 
 import { ArrowLeftSquare, ArrowRightSquare } from "lucide-react";
 
